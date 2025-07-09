@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8" />
+    <title>Indices boursiers</title>
+</head>
+<body>
+   <nav>
+    <a href="#" class="logo">INDICES BOURSIERS</a>
+    <button class="add-btn" onclick="show()">Ajouter un indice</button>
+  </nav>
+  <h1 id="title">Liste d'indices boursiers suivis</h1>
+  
+
+<div id="list"></div>
+
+    <div id="modalDetail">
+        <div id="modalDetailContent">
+            <span id="closeDetail" class="close">&times;</span>
+            <div id="indiceData"></div>
+        </div>
+    </div>
+    <div id="modalAdd">
+        <div id="modalAddContent">
+            <span id="closeAdd" class="close">&times;</span>
+    <form id="form" action="">
+        <div>
+  <label for="name">Nom</label>
+  <input id="name" type="text" required name="name">
+  </div>
+  <div>
+  <label for="symbol">Symbol</label>
+  <input id="symbol" type="text" required name="symbol">
+  </div>
+  <div>
+  <label for="description">Description</label>
+  <textarea name="description" id="description"></textarea>
+  </div>
+  <input type="submit" value="Valider">
+ </form>
+ </div>
+ </div>
+<div id="list"></div>
+</body>
+</html>

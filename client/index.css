@@ -1,0 +1,279 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+nav {
+  background-color: #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+}
+.logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#title {
+ text-align: center;
+ padding: 20px 0 40px;
+}
+
+.add-btn {
+  background-color: #00bfff;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-btn:hover {
+  background-color: #0099cc;
+}
+
+#modalAdd,
+#modalDetail {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+#modalAddContent,
+#modalDetailContent {
+  background-color: white;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80%;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease;
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close:hover {
+  color: #333;
+}
+
+form div {
+  margin-bottom: 1.5rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border-color: #00bfff;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+input[type="submit"] {
+  background-color: #00bfff;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #0099cc;
+}
+
+#indiceData > div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+  gap: 1rem;
+}
+
+#indiceData label {
+  width: 120px;
+  font-weight: bold;
+  color: #333;
+}
+
+#indiceData p,
+#indiceData input,
+#indiceData textarea {
+  flex: 1;
+  padding: 0.6rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+#indiceData p {
+  background-color: #f4f4f4;
+  margin: 0;
+}
+
+#indiceData textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+
+#indiceData button {
+  padding: 0.6rem 1.2rem;
+  margin-right: 1rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+#indiceData button:first-of-type {
+  background-color: #00bfff;
+  color: white;
+}
+
+#indiceData button:first-of-type:hover {
+  background-color: #0099cc;
+}
+#indiceData button:last-of-type {
+  background-color: #ff4d4f;
+  color: white;
+}
+
+#indiceData button:last-of-type:hover {
+  background-color: #e60000;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+#list {
+  width: 100%;
+  max-width: 800px;
+  margin: 1rem auto;
+  border-collapse: collapse;
+  display: table;
+}
+
+
+#list > div {
+  display: table-row;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#list > div:hover {
+  background-color: #f5faff;
+}
+
+
+#list h3,
+#list h2,
+#list p {
+  display: table-cell;
+  padding: 0.75rem 1rem;
+  vertical-align: middle;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+#list p  { width: 50%;}
+
+
+@media (max-width: 600px) {
+  #list {
+    display: block;
+  }
+  #list > div {
+    display: block;
+    margin-bottom: 0.75rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 0.5rem;
+  }
+  
+  #list p {
+    display: block;
+    width: auto;
+    text-align: left;
+  }
+ #list p {
+    margin-top: 0.25rem;
+  }
+}
+
+.list-header {
+  display: table-row;
+  background-color: #f0f0f0;
+  font-weight: bold;
+  color: #555;
+  border-bottom: 2px solid #ccc;
+}
+
+.list-header span {
+  display: table-cell;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+
+
+
