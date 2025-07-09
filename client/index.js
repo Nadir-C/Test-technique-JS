@@ -24,6 +24,7 @@ document.getElementById("form").addEventListener(
       return;
     }
     localStorage.setItem(symbol, JSON.stringify([symbol, name, description, data.regularMarketPrice]));
+    document.getElementById("modalAdd").style.display = "none";
     updateIndices(); 
   },
   false,
@@ -87,7 +88,7 @@ div.appendChild(symbol);
         label.innerHTML = key[index];
         line.appendChild(label);
 
-        if (key[index] === "Name") {
+        if (key[index] === "Nom") {
           const input = document.createElement("input");
           input.id = "inputName";
           input.value = value[index];
